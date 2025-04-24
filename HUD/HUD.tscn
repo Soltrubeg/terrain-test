@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2e04mj6r2owa"]
+
+[ext_resource type="Script" path="res://HUD/hud.gd" id="1_8nsa3"]
+
+[node name="Hud" type="CanvasLayer"]
+layer = 99
+script = ExtResource("1_8nsa3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="FPS" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+
+[node name="Seed" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+
+[node name="Loc" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 32

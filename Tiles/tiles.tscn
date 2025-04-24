@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://cos2gjd2ii8h4"]
+
+[ext_resource type="Texture2D" uid="uid://clejmtla31blm" path="res://Tiles/stone.jpg" id="1_7l7ah"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ksij"]
+albedo_texture = ExtResource("1_7l7ah")
+uv1_scale = Vector3(2, 2, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hue1t"]
+material = SubResource("StandardMaterial3D_5ksij")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4svg3"]
+
+[node name="Tiles" type="Node3D"]
+
+[node name="Stone" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_hue1t")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Stone"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Stone/StaticBody3D"]
+shape = SubResource("BoxShape3D_4svg3")
